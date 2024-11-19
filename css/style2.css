@@ -1,0 +1,151 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    animation: fadeInBody 3s ease-in;
+}
+
+header {
+    background-color: #000;
+    text-align: center;
+    padding: 50px 0;
+    color: #ffcc00;
+    animation: slideInHeader 2s ease-out;
+}
+
+h1 {
+    font-size: 48px;
+    text-shadow: 2px 2px 5px #333;
+    animation: glowText 3s infinite alternate;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.box {
+    width: 300px;
+    height: 300px;
+    background-image: url("https://via.placeholder.com/300/ffcc00/000000?text=Batman+1");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+    animation-name: batmanSlide;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    position: relative;
+}
+
+.message {
+    margin-top: 30px;
+    animation: fadeInMessage 3s ease-in-out;
+}
+
+h2 {
+    font-size: 32px;
+    color: #ffcc00;
+    text-shadow: 1px 1px 3px #000;
+    animation: scaleText 2s ease-in-out infinite alternate;
+}
+
+p {
+    font-size: 18px;
+    color: #f0f0f0;
+    line-height: 1.6;
+}
+
+.memories {
+    margin-top: 50px;
+    animation: slideInMemories 2.5s ease-out;
+}
+
+marquee {
+    font-size: 18px;
+    color: #ffcc00;
+    animation: marqueeGlow 5s infinite alternate;
+}
+
+footer {
+    background-color: #000;
+    color: #ffcc00;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    animation: fadeInFooter 2s ease-in;
+}
+
+/* Keyframe Animations */
+@keyframes batmanSlide {
+    0% {
+        background-image: url("https://via.placeholder.com/300/ffcc00/000000?text=Batman+1");
+        left: 0;
+        top: 0;
+    }
+    25% {
+        background-image: url("https://via.placeholder.com/300/ffcc00/000000?text=Batman+2");
+        left: 200px;
+        top: 0;
+    }
+    50% {
+        background-image: url("https://via.placeholder.com/300/ffcc00/000000?text=Batman+3");
+        left: 300px;
+        top: 300px;
+    }
+    75% {
+        background-image: url("https://via.placeholder.com/300/ffcc00/000000?text=Batman+4");
+        left: 0;
+        top: 300px;
+    }
+    100% {
+        background-image: url("https://via.placeholder.com/300/ffcc00/000000?text=Batman+5");
+        left: 0;
+        top: 0;
+    }
+}
+
+@keyframes fadeInBody {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInHeader {
+    from { transform: translateY(-100px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes glowText {
+    from { text-shadow: 2px 2px 5px #333; }
+    to { text-shadow: 2px 2px 20px #ffcc00; }
+}
+
+@keyframes fadeInMessage {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleText {
+    from { transform: scale(1); }
+    to { transform: scale(1.05); }
+}
+
+@keyframes slideInMemories {
+    from { opacity: 0; transform: translateX(-100px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes marqueeGlow {
+    from { text-shadow: none; }
+    to { text-shadow: 0 0 10px #ffcc00; }
+}
+
+@keyframes fadeInFooter {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
